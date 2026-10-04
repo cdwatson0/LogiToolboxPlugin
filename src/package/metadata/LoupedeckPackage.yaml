@@ -12,7 +12,7 @@ name: LogiToolbox
 displayName: LogiToolbox
 
 # Short description of the plugin.
-description: Add a short description of the plugin here.
+description: **LogiToolbox** is a plugin for [Logi Plugin Service](https://logitech.github.io/actions-sdk-docs/) (the successor to Loupedeck software). It adds a small set of general-purpose actions for Loupedeck / Logitech console devices.
 
 # Name of the plugin library file.
 pluginFileName: LogiToolboxPlugin.dll
@@ -21,10 +21,10 @@ pluginFileName: LogiToolboxPlugin.dll
 version: 1.0
 
 # Author of the plugin. The author can be a company or an individual developer.
-author: Chris
+author: Chris Watson
 
 # Copyright information.
-copyright: Copyright © 2026 Chris. All rights reserved.
+copyright: Copyright © 2026 Chris Watson. All rights reserved.
 
 
 # ==================================================================================================
@@ -74,7 +74,7 @@ licenseUrl: https://opensource.org/licenses/MIT
 # URL of the support page where the users can send improvement suggestions and report bugs.
 # The URL is shown in Loupedeck Marketplace. The page can be for example a GitHub issues page.
 # NOTE: This setting is recommended when publishing the plugin in Loupedeck Marketplace.
-#supportPageUrl: https://github.com/myusername/myplugin/issues
+#supportPageUrl: https://github.com/myusername/LogiToolbox/issues
 
 # URL of the plugin homepage. The URL is shown in Loupedeck Marketplace.
-#homePageUrl: https://github.com/myusername/myplugin
+#homePageUrl: https://github.com/cdwatson0/LogiToolbox

@@ -12,7 +12,7 @@ name: LogiToolbox
 displayName: LogiToolbox
 
 # Short description of the plugin.
-description: **LogiToolbox** is a plugin for [Logi Plugin Service](https://logitech.github.io/actions-sdk-docs/) (the successor to Loupedeck software). It adds a small set of general-purpose actions for Loupedeck / Logitech console devices.
+description: a plugin for [Logi Plugin Service that adds a small set of general-purpose actions for Loupedeck / Logitech console devices
 
 # Name of the plugin library file.
 pluginFileName: LogiToolboxPlugin.dll

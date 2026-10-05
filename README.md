@@ -10,6 +10,12 @@ It is a *universal* plugin: it isn't tied to any application and works with what
 | --- | --- | --- | --- |
 | **Type Text** | Button command | Keyboard | Types the configured text into the foreground application, one character at a time. Configurable delay between keystrokes (default 50 ms, clamped to 0–1000 ms). Ignores presses while a previous run is still typing. |
 | **Repeat Key Combination** | Button command | Keyboard | Press once to start sending a key combination to the foreground application on a timer; press again to stop. Configurable interval (default 1000 ms, minimum 20 ms). The button icon shows a circular arrow that is dim when idle, blue while repeating, and flashes on every key press. Several buttons can repeat different keys independently. |
+| **Key Sequence / Macro** | Button command | Keyboard | Runs a `;`-separated script, e.g. `key ctrl+a; key ctrl+c; wait 200; type hello; key enter; click left`. Steps: `key <combo>`, `type <text>`, `wait <ms>`, `click [left\|right\|middle]`. The script is validated before anything is sent. Configurable pause after each step (default 50 ms). |
+| **Hold Key** | Button command | Keyboard | Press once to hold a key combination down, press again to release it. A toggle, because button commands have no release event. Keys are released if the plugin unloads. |
+| **Mouse Jiggler** | Button command | Mouse | Press to start nudging the pointer one pixel and back every N seconds (default 30), press again to stop. |
+| **Auto-Clicker** | Button command | Mouse | Press to start clicking at the pointer position (left/right/middle, interval default 100 ms, minimum 10 ms), press again to stop. |
+| **Launch App / URL** | Button command | System | Opens a program, file, folder or web address via the Windows shell, with optional arguments. Environment variables like `%USERPROFILE%` are expanded. |
+| **HTTP Check** | Button command | Network | Requests a URL (5 s timeout, `https://` assumed if omitted) and shows the status code and response time, or `Timeout` / `Failed`. |
 | **Ping** | Button command | Network | Pings a per-button host name or IP address (2 s timeout) and shows the round-trip time, or the failure status, on the button. |
 | **Counter** | Dial adjustment | Counters | Counts dial rotation ticks and short presses, shown as `ticks (pressesx)`. A long press resets both counts. |
 

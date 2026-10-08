@@ -18,7 +18,7 @@ description: a plugin for [Logi Plugin Service that adds a small set of general-
 pluginFileName: LogiToolboxPlugin.dll
 
 # Plugin version.
-version: 1.0
+version: 1.1
 
 # Author of the plugin. The author can be a company or an individual developer.
 author: Chris Watson
@@ -27,7 +27,7 @@ author: Chris Watson
 copyright: Copyright © 2026 Chris Watson. All rights reserved.
 
 
-# ==================================================================================================
+# ==================================================================================================e!2
 # PLUGIN PROPERTIES
 # ==================================================================================================
 

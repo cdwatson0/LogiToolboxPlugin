@@ -39,6 +39,20 @@ namespace Loupedeck.LogiToolboxPlugin
             Send(down, up);
         }
 
+        // Maps a character to the key (and Shift state) that produces it on the current keyboard layout.
+        public static Boolean TryGetKeyForCharacter(Char character, out VirtualKeyCode virtualKeyCode, out Boolean needsShift)
+        {
+            var result = VkKeyScan(character);
+            var key = (Byte)(result & 0xFF);
+            var shiftState = (result >> 8) & 0xFF;
+
+            virtualKeyCode = (VirtualKeyCode)key;
+            needsShift = (shiftState & 1) != 0;
+
+            // -1 means no key produces the character; Ctrl/Alt combinations (AltGr) aren't handled here.
+            return result != -1 && (shiftState & ~1) == 0;
+        }
+
         public static void MoveMouseBy(Int32 deltaX, Int32 deltaY)
         {
             var input = new Input { Type = InputMouse };
@@ -102,6 +116,9 @@ namespace Loupedeck.LogiToolboxPlugin
 
         [DllImport("user32.dll", SetLastError = true)]
         private static extern UInt32 SendInput(UInt32 inputCount, Input[] inputs, Int32 size);
+
+        [DllImport("user32.dll")]
+        private static extern Int16 VkKeyScan(Char character);
 
         [DllImport("user32.dll")]
         private static extern UInt32 MapVirtualKey(UInt32 code, UInt32 mapType);

@@ -1,7 +1,10 @@
 <Project>
     <PropertyGroup>
         <LangVersion>latest</LangVersion>
-        <BaseIntermediateOutputPath>$(SolutionDir)obj\</BaseIntermediateOutputPath>
-        <BaseOutputPath>$(SolutionDir)..\bin\</BaseOutputPath>
+        <!-- $(SolutionDir) is only defined for solution builds, so it made obj land in a different
+             place depending on how (and from where) the build was started, which produced duplicate
+             attribute errors. Anchor on this file's folder instead. -->
+        <BaseIntermediateOutputPath>$(MSBuildThisFileDirectory)..\obj\</BaseIntermediateOutputPath>
+        <BaseOutputPath>$(MSBuildThisFileDirectory)..\bin\</BaseOutputPath>
     </PropertyGroup>
 </Project>
